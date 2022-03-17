@@ -1,6 +1,7 @@
 ---
 createdAt: 2021-02-28
 title: Easy excerpt from content
+description: test
 ---
 
 You can add an excerpt easily by writing `<!--MORE-->` in lowercase in the content.
