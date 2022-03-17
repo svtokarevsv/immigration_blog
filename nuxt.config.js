@@ -9,6 +9,9 @@ export default {
   generate: {
     fallback: true
   },
+  server: {
+    port: 8001 // default: 3000
+  },
   // ? The env Property: https://nuxtjs.org/api/configuration-env/
   env: {
     url:
@@ -40,11 +43,11 @@ export default {
       {
         rel: 'preload',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,500&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,500&display=swap',
         media: 'print',
         onload: `this.media='all'`
       }
@@ -64,7 +67,13 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.pcss'],
+  css: ['~/assets/bootstrap/css/bootstrap.min.css','~/assets/css/style.css'],
+  script: [
+    {
+      src: "~/assets/bootstrap/js/bootstrap.min.js",
+      type: "text/javascript"
+    }
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -72,7 +81,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  buildModules: ['@nuxtjs/svg', '@nuxtjs/pwa'],
   /*
    ** Nuxt.js modules
    */
@@ -82,17 +91,17 @@ export default {
    */
   build: {
     extractCSS: true,
-    postcss: {
-      plugins: {
-        'postcss-preset-env': postcssPresetEnv({
-          stage: 1,
-          features: {
-            'nesting-rules': false
-          }
-        }),
-        'postcss-easing-gradients': postcssEasingGradients
-      }
-    },
+    // postcss: {
+    //   plugins: {
+    //     'postcss-preset-env': postcssPresetEnv({
+    //       stage: 1,
+    //       features: {
+    //         'nesting-rules': false
+    //       }
+    //     }),
+    //     'postcss-easing-gradients': postcssEasingGradients
+    //   }
+    // },
     /*
      ** You can extend webpack config here
      */
@@ -105,29 +114,24 @@ export default {
   content: {
     dir: 'content'
   },
-  tailwindcss: {
-    viewer: false, // disabled because it causes `Error: Cannot find module 'tailwindcss/resolveConfig'`, fixed in https://github.com/nuxt-community/tailwindcss-module/pull/303
-    cssPath: '~/assets/css/main.pcss',
-    exposeConfig: false // enables `import { theme } from '~tailwind.config'`
-  },
-  purgeCSS: {
-    mode: 'postcss',
-    // ? Safelisting docs: https://purgecss.com/safelisting.html
-    safelist: {
-      // standard: [],
-      deep: [/dark/, /light/, /btn/, /icon/, /main/],
-      greedy: [
-        /^card/,
-        /image$/,
-        /title$/,
-        /^nuxt-content/,
-        /code/,
-        /pre/,
-        /token/,
-        /^vue-content-placeholders/
-      ]
-    }
-  },
+  // purgeCSS: {
+  //   mode: 'postcss',
+  //   // ? Safelisting docs: https://purgecss.com/safelisting.html
+  //   safelist: {
+  //     // standard: [],
+  //     deep: [/dark/, /light/, /btn/, /icon/, /main/],
+  //     greedy: [
+  //       /^card/,
+  //       /image$/,
+  //       /title$/,
+  //       /^nuxt-content/,
+  //       /code/,
+  //       /pre/,
+  //       /token/,
+  //       /^vue-content-placeholders/
+  //     ]
+  //   }
+  // },
   colorMode: {
     classSuffix: '',
     preference: 'system', // default value of $colorMode.preference
