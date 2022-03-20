@@ -1,10 +1,10 @@
 {
   "name": "helping_ukrainians_in_canada",
-  "version": "2.1.2",
+  "version": "0.0.1",
   "description": "Help in immigration to Canada",
-  "author": "UKRTO",
+  "author": "UkrTO",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "npx netlify-cms-proxy-server && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -17,7 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "nuxt": "^2.15.8"
+    "nuxt": "^2.15.8",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@nuxtjs/pwa": "^3.3.5",

@@ -58,7 +58,13 @@ export default {
           '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">'
       }
     ],
-    __dangerouslyDisableSanitizers: ['noscript']
+    __dangerouslyDisableSanitizers: ['noscript'],
+    script: [
+      {
+        src: "bootstrap/js/bootstrap.min.js",
+        type: "text/javascript"
+      }
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -67,13 +73,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/bootstrap/css/bootstrap.min.css','~/assets/css/style.css'],
-  script: [
-    {
-      src: "~/assets/bootstrap/js/bootstrap.min.js",
-      type: "text/javascript"
-    }
-  ],
+  css: ['~/static/bootstrap/css/bootstrap.min.css','~/assets/css/style.css'],
   /*
    ** Plugins to load before mounting the App
    */
