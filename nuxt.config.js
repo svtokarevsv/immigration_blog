@@ -1,5 +1,3 @@
-import postcssPresetEnv from 'postcss-preset-env'
-import postcssEasingGradients from 'postcss-easing-gradients'
 import * as SITE_INFO from './content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
@@ -73,7 +71,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/static/bootstrap/css/bootstrap.min.css','~/assets/css/style.css'],
+  css: ['~/static/bootstrap/css/bootstrap.min.css','~/static/css/style.css'],
   /*
    ** Plugins to load before mounting the App
    */

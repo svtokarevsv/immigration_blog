@@ -64,14 +64,6 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
       - { label: 'Created Date', name: 'createdAt', widget: 'datetime', date_format: "YYYY-MM-DD", time_format: false }
-#      - {
-#        label: 'Gallery',
-#        name: 'gallery',
-#        widget: 'list',
-#        required: false,
-#        summary: '{{fields.image}}',
-#        field: { label: 'Image', name: 'image', widget: 'image' },
-#      }
       - label: 'Page Section'
         name: 'sections'
         widget: 'list'
@@ -90,3 +82,11 @@ collections:
                   - { label: "Image", name: "image", widget: "image", required: false }
                   - { label: Image Description, name: alt, widget: string }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - {
+        label: 'Gallery',
+        name: 'gallery',
+        widget: 'list',
+        required: false,
+        summary: '{{fields.file}}',
+        field: { label: 'File', name: 'file', widget: 'file' },
+      }

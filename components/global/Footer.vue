@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md">
-          <img class="mb-2" src="/photo/_uit_logo_color.png" alt="" width="44" height="49">
+          <img class="mb-2" src="/img/_uit_logo_color.png" alt="" width="44" height="49">
           <small class="d-block mb-3 text-muted">© 2017–2021</small>
         </div>
         <div class="col-6 col-md">
@@ -18,9 +18,25 @@
         <div class="col-6 col-md">
           <h5>Про нас</h5>
           <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Наша місія</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Співпраця</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Правила спільноти</a></li>
+            <li class="mb-1">
+              <nuxt-link
+                to="/about"
+                class="link-secondary text-decoration-none">
+              Наша місія
+              </nuxt-link>
+            </li>
+            <li class="mb-1">
+              <nuxt-link
+                to="/cooperation"
+                class="link-secondary text-decoration-none">Співпраця
+              </nuxt-link>
+            </li>
+            <li class="mb-1">
+              <nuxt-link
+                to="/rules"
+                class="link-secondary text-decoration-none">Правила спільноти
+              </nuxt-link>
+            </li>
           </ul>
         </div>
       </div>

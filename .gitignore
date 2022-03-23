@@ -81,6 +81,7 @@ dist
 .idea
 .editorconfig
 .code-workspace
+.vscode
 
 # Service worker
 sw.*
@@ -93,3 +94,4 @@ sw.*
 
 # Local Netlify folder
 .netlify
+

@@ -18,6 +18,7 @@
       <a class="p-2 link-secondary" :href="'#'+ transliterate(section.title)"
          v-for="(section, index) in post.sections"
          :key="index">{{ section.title }}</a>
+      <hr/>
     </nav>
     <div class="row g-5">
       <div class="col-md-8">
@@ -33,6 +34,10 @@
         <section v-if="post.body">
           <nuxt-content :document="post" />
         </section>
+        <div v-if="post.gallery">
+          Додаткові файли:
+          <a :href="file" v-for="(file, index) in post.gallery" :key="index">{{file}}</a>
+        </div>
       </div>
       <!--Right pannel-->
       <div class="col-md-4">
@@ -90,6 +95,7 @@ export default {
     let posts;
     try {
       post = await $content('blog', params.blog).fetch();
+      debugger
       posts = await $content("blog").only(['title','url_name', 'slug']).fetch();
       posts.unshift({slug:'/', title:'Головна: Правила, процедури та новини для Українців'})
       if (post.sections) {

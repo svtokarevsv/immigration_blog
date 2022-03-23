@@ -4,7 +4,8 @@
   "description": "Help in immigration to Canada",
   "author": "UkrTO",
   "scripts": {
-    "dev": "npx netlify-cms-proxy-server && nuxt",
+    "netlify": "npx netlify-cms-proxy-server",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

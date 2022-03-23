@@ -84,6 +84,10 @@ html{
     display: flex;
     justify-content: center;
 }
+main img{
+    max-width: 100%;
+    max-height: 1000px;
+}
 @media all and (min-width:576px) {
     .collapse.navbar-collapse {
         flex-grow: 0;

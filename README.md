@@ -1,3 +1,12 @@
+
+## UkrTO info
+For local development in one terminal run  `` npm run netlify`` it will allow editing articles locally from `/admin` page. If you don't plan to add\edit articles, no need to run this command.
+
+In other terminal run `npm run dev` - this will start local Vue app with hot reload
+To add new pages like `/contacts` just add `contacts.vue` to `pages` folder
+
+Below is default instructions after template install 📦
+___________________
 # 🏗️ Boilerplate for Nuxt, Tailwind & NetlifyCMS
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cb2d4cc5-8a65-4940-81ce-4456ff96e6db/deploy-status)](https://app.netlify.com/sites/ntn-boilerplate/deploys) ← replace with [your own](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_SLUG/settings/general#deploy-status-badge)
